@@ -6,9 +6,10 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/google/uuid"
-	_ "github.com/lib/pq"
+	"github.com/lib/pq"
 )
 
 var Db *sql.DB
@@ -22,7 +23,10 @@ const (
 )
 
 func init() {
-	Db, err = sql.Open(config.Config.SQLDriver, "host=postgres user="+config.Config.DbUser+" dbname="+config.Config.DbName+" password="+config.Config.Password+" sslmode=disable")
+	url := os.Getenv("DATABASE_URL")
+	connection, _ := pq.ParseURL(url)
+	connection += "sslmode=require"
+	Db, err = sql.Open(config.Config.SQLDriver, connection)
 	if err != nil {
 		log.Fatalln(err)
 	}

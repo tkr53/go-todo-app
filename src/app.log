@@ -1,0 +1,142 @@
+2023/03/27 15:35:45 main.go:17: test
+2023/03/27 16:18:38 base.go:37: pq: type "datetime" does not exist
+2023/03/28 15:34:34 users.go:50: pq: syntax error at or near "where"
+2023/03/28 15:39:05 users.go:50: sql: database is closed
+2023/04/01 15:26:45 todos.go:36: pq: syntax error at or near "elect"
+2023/04/01 15:31:27 todos.go:55: pq: there is no parameter $1
+2023/04/01 16:07:00 server.go:3217: http: panic serving 127.0.0.1:49474: open app/views/template/layout.html: no such file or directory
+goroutine 19 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1854 +0xbf
+panic({0x73c0a0, 0xc00011d350})
+	/usr/local/go/src/runtime/panic.go:890 +0x263
+text/template.Must(...)
+	/usr/local/go/src/text/template/helper.go:26
+app/app/controllers.generateHTML({0x80b290?, 0xc0001a2000}, {0x71d8e0, 0x8073e0}, {0xc000133a28?, 0x2, 0x50e306?})
+	/go/src/app/controllers/server.go:16 +0x237
+app/app/controllers.top({0x80b290?, 0xc0001a2000?}, 0xffffffffffffffff?)
+	/go/src/app/controllers/route_main.go:8 +0x75
+net/http.HandlerFunc.ServeHTTP(0xc000170180?, {0x80b290?, 0xc0001a2000?}, 0x40f0c8?)
+	/usr/local/go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x80b290, 0xc0001a2000}, 0xc000174100)
+	/usr/local/go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d140?}, {0x80b290, 0xc0001a2000}, 0xc000174100)
+	/usr/local/go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00017e000, {0x80b4e8, 0xc00011d050})
+	/usr/local/go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3089 +0x5ed
+2023/04/01 16:07:01 server.go:3217: http: panic serving 127.0.0.1:49482: open app/views/template/layout.html: no such file or directory
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1854 +0xbf
+panic({0x73c0a0, 0xc00011d4d0})
+	/usr/local/go/src/runtime/panic.go:890 +0x263
+text/template.Must(...)
+	/usr/local/go/src/text/template/helper.go:26
+app/app/controllers.generateHTML({0x80b290?, 0xc0001a21c0}, {0x71d8e0, 0x8073e0}, {0xc00006fa28?, 0x2, 0x50e306?})
+	/go/src/app/controllers/server.go:16 +0x237
+app/app/controllers.top({0x80b290?, 0xc0001a21c0?}, 0xffffffffffffffff?)
+	/go/src/app/controllers/route_main.go:8 +0x75
+net/http.HandlerFunc.ServeHTTP(0xc000170200?, {0x80b290?, 0xc0001a21c0?}, 0x40f0c8?)
+	/usr/local/go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x80b290, 0xc0001a21c0}, 0xc000174200)
+	/usr/local/go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d230?}, {0x80b290, 0xc0001a21c0}, 0xc000174200)
+	/usr/local/go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00017e090, {0x80b4e8, 0xc00011d050})
+	/usr/local/go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3089 +0x5ed
+2023/04/01 16:07:01 server.go:3217: http: panic serving 127.0.0.1:49498: open app/views/template/layout.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1854 +0xbf
+panic({0x73c0a0, 0xc00011d5c0})
+	/usr/local/go/src/runtime/panic.go:890 +0x263
+text/template.Must(...)
+	/usr/local/go/src/text/template/helper.go:26
+app/app/controllers.generateHTML({0x80b290?, 0xc0001a2380}, {0x71d8e0, 0x8073e0}, {0xc00006ea28?, 0x2, 0x50e306?})
+	/go/src/app/controllers/server.go:16 +0x237
+app/app/controllers.top({0x80b290?, 0xc0001a2380?}, 0xffffffffffffffff?)
+	/go/src/app/controllers/route_main.go:8 +0x75
+net/http.HandlerFunc.ServeHTTP(0xc000170300?, {0x80b290?, 0xc0001a2380?}, 0x40f0c8?)
+	/usr/local/go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x80b290, 0xc0001a2380}, 0xc000174300)
+	/usr/local/go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d410?}, {0x80b290, 0xc0001a2380}, 0xc000174300)
+	/usr/local/go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00017e240, {0x80b4e8, 0xc00011d050})
+	/usr/local/go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3089 +0x5ed
+2023/04/01 16:07:01 server.go:3217: http: panic serving 127.0.0.1:49510: open app/views/template/layout.html: no such file or directory
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1854 +0xbf
+panic({0x73c0a0, 0xc00011d7a0})
+	/usr/local/go/src/runtime/panic.go:890 +0x263
+text/template.Must(...)
+	/usr/local/go/src/text/template/helper.go:26
+app/app/controllers.generateHTML({0x80b290?, 0xc0001a2540}, {0x71d8e0, 0x8073e0}, {0xc00006ea28?, 0x2, 0x50e306?})
+	/go/src/app/controllers/server.go:16 +0x237
+app/app/controllers.top({0x80b290?, 0xc0001a2540?}, 0xffffffffffffffff?)
+	/go/src/app/controllers/route_main.go:8 +0x75
+net/http.HandlerFunc.ServeHTTP(0xc000170500?, {0x80b290?, 0xc0001a2540?}, 0x40f0c8?)
+	/usr/local/go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x80b290, 0xc0001a2540}, 0xc000174400)
+	/usr/local/go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d6e0?}, {0x80b290, 0xc0001a2540}, 0xc000174400)
+	/usr/local/go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00017e510, {0x80b4e8, 0xc00011d050})
+	/usr/local/go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3089 +0x5ed
+2023/04/01 16:07:07 server.go:3217: http: panic serving 127.0.0.1:49518: open app/views/template/layout.html: no such file or directory
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1854 +0xbf
+panic({0x73c0a0, 0xc00009a090})
+	/usr/local/go/src/runtime/panic.go:890 +0x263
+text/template.Must(...)
+	/usr/local/go/src/text/template/helper.go:26
+app/app/controllers.generateHTML({0x80b290?, 0xc0000a0000}, {0x71d8e0, 0x8073e0}, {0xc00006ea28?, 0x2, 0x50e306?})
+	/go/src/app/controllers/server.go:16 +0x237
+app/app/controllers.top({0x80b290?, 0xc0000a0000?}, 0xffffffffffffffff?)
+	/go/src/app/controllers/route_main.go:8 +0x75
+net/http.HandlerFunc.ServeHTTP(0xc000170580?, {0x80b290?, 0xc0000a0000?}, 0x40f0c8?)
+	/usr/local/go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x80b290, 0xc0000a0000}, 0xc000174500)
+	/usr/local/go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d860?}, {0x80b290, 0xc0000a0000}, 0xc000174500)
+	/usr/local/go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00017e6c0, {0x80b4e8, 0xc00011d050})
+	/usr/local/go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3089 +0x5ed
+2023/04/01 16:07:07 server.go:3217: http: panic serving 127.0.0.1:49524: open app/views/template/layout.html: no such file or directory
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1854 +0xbf
+panic({0x73c0a0, 0xc00009a210})
+	/usr/local/go/src/runtime/panic.go:890 +0x263
+text/template.Must(...)
+	/usr/local/go/src/text/template/helper.go:26
+app/app/controllers.generateHTML({0x80b290?, 0xc0000a01c0}, {0x71d8e0, 0x8073e0}, {0xc00006ea28?, 0x2, 0x50e306?})
+	/go/src/app/controllers/server.go:16 +0x237
+app/app/controllers.top({0x80b290?, 0xc0000a01c0?}, 0xffffffffffffffff?)
+	/go/src/app/controllers/route_main.go:8 +0x75
+net/http.HandlerFunc.ServeHTTP(0xc000030080?, {0x80b290?, 0xc0000a01c0?}, 0x40f0c8?)
+	/usr/local/go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x80b290, 0xc0000a01c0}, 0xc0000b8000)
+	/usr/local/go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xc00009a150?}, {0x80b290, 0xc0000a01c0}, 0xc0000b8000)
+	/usr/local/go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc000096120, {0x80b4e8, 0xc00011d050})
+	/usr/local/go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3089 +0x5ed
+2023/04/03 15:16:03 base.go:66: pq: type "string" does not exist
+2023/04/03 15:26:39 main.go:18: pq: column "user_iid" does not exist
+2023/04/03 15:26:47 main.go:18: sql: no rows in result set
+2023/04/05 15:21:00 route_main.go:24: sql: Scan error on column index 3, name "email": converting driver.Value type string ("test@example.com") to a int: invalid syntax

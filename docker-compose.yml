@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  go:
+    container_name: go_lang
+    image: golang:latest
+    tty: true
+    volumes:
+      - "./src:/go/src"
+    working_dir: "/go/src"
+    restart: always
+    networks:
+      - go-network
+  db:
+    container_name: postgres
+    image: postgres:14.4-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: go_db
+    volumes:
+      - db-store:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - go-network
+
+networks:
+  go-network:
+volumes:
+  db-store:

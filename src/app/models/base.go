@@ -6,6 +6,7 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/google/uuid"
 	"github.com/lib/pq"
@@ -22,7 +23,7 @@ const (
 )
 
 func init() {
-	url := "postgres://user:n76OH66vPNEMCXuVOCzXP96C8JeTVlWp@dpg-cgneulkeooguihh5tiog-a.singapore-postgres.render.com/go_db_04n8"
+	url := os.Getenv("DATABASE_URL")
 	connection, _ := pq.ParseURL(url)
 	connection += "sslmode=require"
 	Db, err = sql.Open(config.Config.SQLDriver, connection)
